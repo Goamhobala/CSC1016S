@@ -3,7 +3,7 @@
 
 ### Translation process
 * A compiler language
-* Before it's compiled into machine code for each processor, java code is first converted into java-byte code using the java virtual machine (jvm)
+* Before it's compiled into machine code for each processor, java cod (.java) is first converted into java-byte code using the java virtual machine (jvm) (.class file)
 * Write-once, run everywhere
 
 ###  Objects and Methods
@@ -24,3 +24,26 @@ public class Hello{
 }
 ```
 
+### System.out.println()
+* Java programs work by calling objects
+* **System** is a package
+* **out** is a class
+* **System.out**: An object used for sending output to the screen
+* **println** method
+* "Hi mom!" argument
+* Actions performed by objects are known as methods
+
+### Variables declarations
+* When declaring variables, because java is not a dynamic-type language (static type language), you must declare the type of the variable
+
+```java
+double length = 10.3;
+float height = 180.3f;
+byte number = 12 // 1 byte (-128 t0 127)
+short number2 = 245 // 2 bytes (-32768 to 32757)
+int weight = 71; // 4 bytes (large number)
+String message = "Hi";
+boolean eat = false;
+char mom = "m";
+byte 
+```
