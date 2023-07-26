@@ -11,12 +11,16 @@
             "id": "e856615975a1835f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
-            "id": "d1858c4152ae705d",
+            "id": "5ac0dec80702d5f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -156,8 +160,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d1858c4152ae705d",
+  "active": "5ac0dec80702d5f7",
   "lastOpenFiles": [
+    "Untitled.md",
     "Java Introduction.md"
   ]
 }

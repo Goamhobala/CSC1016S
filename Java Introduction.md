@@ -35,15 +35,48 @@ public class Hello{
 
 ### Variables declarations
 * When declaring variables, because java is not a dynamic-type language (static type language), you must declare the type of the variable
+* Basic types are known as primitive types
+* A variable must first be initialised.
+* Oftentimes, variables are given an initial values. However, don't rely on this
 
 ```java
-double length = 10.3;
+double length = 10.3; //Declaration plus assignment
 float height = 180.3f;
 byte number = 12 // 1 byte (-128 t0 127)
 short number2 = 245 // 2 bytes (-32768 to 32757)
 int weight = 71; // 4 bytes (large number)
 String message = "Hi";
 boolean eat = false;
-char mom = "m";
-byte 
+char mom;
+```
+Note: String uses double quote, char uses single quote
+
+
+### Naming convention
+* Classes: FirstClass
+* Variables, objects, methods: camelCase
+* Constants: MAX_SPEED
+
+### Assignment
+* Right to left, hence can be chained
+* int decimal = 1.00 doesn't work but double one = 1 works
+* Hierarchy: Byte -> Short -> (int == char )->long-> float -> double ->
+* Note: When both operands are int, it'll give you a floor integer answer.
+* If you want the answer to be in double, type cast one of them. 
+```java
+int n = 11;
+int m = 5;
+double answer = n / (double) m;
+
+
+```
+
+### Increment and decrement:
+* ++n pre-increment, --n pre-decrement
+* n++ post-increment, n-- post-decrement likewise.
+```java
+int n = 3;
+int m = 3;
+int x = n++ + 2; // x = 5
+int y = --m + 2; // y = 4
 ```
