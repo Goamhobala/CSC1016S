@@ -80,3 +80,24 @@ int m = 3;
 int x = n++ + 2; // x = 5
 int y = --m + 2; // y = 4
 ```
+
+
+### String 
+* Not a primitive data type
+* Is an object, and therefore has methods associated with it
+* Immutatble: A new object is created everytime a change is made
+* When a string is combined with another 
+* Note: When comparing string, use .equals() method instead of == (because they're different objects)
+* Use charAt to access the character
+* It is iterable
+```java
+System.out.println("")//Print with a new line
+System.out.print("")// Print without a new line
+System.out.printf("formatSpecifiers", value1, value2)// Print with formatting (Look up the syntax) Default right align
+/*
+- % indicates start of specifier
+- int justifying characters
+- .int rounding
+-  
+*/
+```

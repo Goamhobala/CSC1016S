@@ -1,52 +1,35 @@
 {
   "main": {
-    "id": "a2541a6daf364818",
+    "id": "bf451ae61cc1334c",
     "type": "split",
     "children": [
       {
-        "id": "80e7774e889bd189",
+        "id": "99430cf4e120a170",
         "type": "tabs",
         "children": [
           {
-            "id": "e856615975a1835f",
+            "id": "287adca298622eb8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5ac0dec80702d5f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java Introduction.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "c313c04bbf11b565",
+    "id": "6719979d9c930606",
     "type": "split",
     "children": [
       {
-        "id": "4db73899ed7ec155",
+        "id": "7c47fd122e106643",
         "type": "tabs",
         "children": [
           {
-            "id": "395bf7ed87585717",
+            "id": "ca88b9847b6fb344",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +39,7 @@
             }
           },
           {
-            "id": "fda0d41bc16f5560",
+            "id": "971193a6a3fa07ed",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +54,7 @@
             }
           },
           {
-            "id": "60b981c8a51e8c86",
+            "id": "2b92a4be5cc1e9e1",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,24 +65,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "01e030b22d5789b3",
+    "id": "6575493ddc024902",
     "type": "split",
     "children": [
       {
-        "id": "fad7266a5131c654",
+        "id": "92588d691d66e40c",
         "type": "tabs",
         "children": [
           {
-            "id": "456d763b31aaf534",
+            "id": "3dd3c064f4a051b5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java Introduction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,19 +92,18 @@
             }
           },
           {
-            "id": "a1bd0be029d28010",
+            "id": "56319badbbc5e1eb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java Introduction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "4b6a7a27454791e0",
+            "id": "942756e44355ba35",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -134,13 +114,11 @@
             }
           },
           {
-            "id": "bb03acdf01731bc8",
+            "id": "00f3f39b05b125da",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Java Introduction.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,20 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5ac0dec80702d5f7",
-  "lastOpenFiles": [
-    "Assignment 2/CalculateDuration.class",
-    "Assignment 2/CalculateDuration.java",
-    "Assignment 2/Duration.class",
-    "Assignment 2/Time.class",
-    "Assignment 2/Currency.java",
-    "Assignment 2/Duration.java",
-    "Assignment 2/Money.java",
-    "Assignment 2/Time.java",
-    "Assignment 2",
-    "Assignment1/orientation.zip",
-    "Assignment1/Archive.zip",
-    "Untitled.md",
-    "Java Introduction.md"
-  ]
+  "active": "287adca298622eb8",
+  "lastOpenFiles": []
 }
