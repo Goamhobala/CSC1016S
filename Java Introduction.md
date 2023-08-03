@@ -29,7 +29,7 @@ public class Hello{
 * **System** is a package
 * **out** is a class
 * **System.out**: An object used for sending output to the screen
-* **println** method
+* **println** method, moves pointer to beginning of next line
 * "Hi mom!" argument
 * Actions performed by objects are known as methods
 
@@ -90,6 +90,7 @@ int y = --m + 2; // y = 4
 * Note: When comparing string, use .equals() method instead of == (because they're different objects)
 * Use charAt to access the character
 * It is iterable
+* printf is an example of legacy code (things from originally migrated from other programming languages)
 ```java
 System.out.println("")//Print with a new line
 System.out.print("")// Print without a new line
@@ -101,3 +102,63 @@ System.out.printf("formatSpecifiers", value1, value2)// Print with formatting (L
 -  
 */
 ```
+
+### Importing packages and classes
+```java
+import java.text.NumberFormat;
+//OR
+import java.text.*;
+
+```
+
+### Scanner class
+* Part of the java util library
+* Allows you to access keyboard inp
+* Separator is whitespace (unlike python which uses new line)
+* nextIn() for integers, nextDouble for doubles etc.
+* next() vs nextLine: Reads from the current position on the line to the end of line. (ends at but excludes \\n)
+
+```java
+import java.util.Scanner
+
+public class Example{
+	
+   private static Time[] getInputs(){  
+    
+      try (Scanner input = new Scanner(System.in)){  
+         System.out.println("Enter time A:");  
+         Time timeBefore = new Time(input.nextLine());  
+         System.out.println("Enter time B:");  
+         Time timeAfter = new Time(input.nextLine());  
+      }  
+      return new Time[]{timeBefore, timeAfter};  
+                
+   }
+}
+```
+
+### Be careful when mixing nextline and other next together.
+```java\
+int n = input.nextInt();
+//NB: s1 is empty since n ends with an white space. It moves the pointer to the next line (you don't actually need the assignment)
+String s1 = keyboard.nextLine(); 
+String s2 = keyboard.nextLine();
+```
+
+### File input/output
+* Scanner class can also be used to read files
+* Other classes to use
+```java
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+```
+* Use try and catch to open file
+* Use nextLine(), nextInt() to read from Scanner like reading from console
+
+### Null
+* Means there's something there but the something there is nothing
+
+
+### If-else
+* You can add ; to the end of a if block, to isolated nested if block for example.

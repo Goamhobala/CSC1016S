@@ -30,6 +30,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5bc457ede1dd8509",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Java classes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -162,6 +174,11 @@
   },
   "active": "5ac0dec80702d5f7",
   "lastOpenFiles": [
+    "Java classes.md",
+    "Java Introduction.md",
+    "Test.java",
+    "test.java",
+    "Assignment 2/SumCost.java",
     "Assignment 2/CalculateDuration.class",
     "Assignment 2/CalculateDuration.java",
     "Assignment 2/Duration.class",
@@ -169,11 +186,6 @@
     "Assignment 2/Currency.java",
     "Assignment 2/Duration.java",
     "Assignment 2/Money.java",
-    "Assignment 2/Time.java",
-    "Assignment 2",
-    "Assignment1/orientation.zip",
-    "Assignment1/Archive.zip",
-    "Untitled.md",
-    "Java Introduction.md"
+    "Untitled.md"
   ]
 }
