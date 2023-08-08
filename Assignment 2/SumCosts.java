@@ -25,7 +25,6 @@ public class SumCosts {
       }
       
       inputs.close();
-      
       System.out.println("Total: " + totalCost.toString());
    } 
 }

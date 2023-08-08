@@ -162,3 +162,56 @@ import java.io.FileNotFoundException;
 
 ### If-else
 * You can add ; to the end of a if block, to isolated nested if block for example.
+
+### Array:
+* A data structure to process a collection of data
+* Static type in java
+* Builtin java array is static. i.e. Size fixed
+* To use dynamic array use ArrayList
+* Strict type
+* The **length public instance variable** gives you the maximum number of values (the array size), instead of the actual number of values
+* Declare a counter to store the number of values
+Syntax:
+```java
+double[] numbers = new double[5]; // array of size 5]
+String[] mangas = {"Gintama", "Chainsaw man"}; // array of size 2
+
+```
+
+### For loop
+```java
+for (int i; i < 10; i++){
+	System.out.println(i);
+}
+```
+* Can change counter within the loop. You can even omit the updater 
+* Initialise -> test -> body -> update
+* Since update comes last, ++i and i++ make no difference
+* If leave boolean expression blank, then infinite loop
+* You can also leave the initialiser out, if you've pre-declared the variable already. This allows you to access the counter outside of the loop
+ ```java
+int j = 10;
+for (;j< 17;j++){
+	System.out.println(j);
+}   
+      
+System.out.println(j);
+```
+* exit, break, continue 
+	* exit ends the program immediately
+	* break ends the loop
+	* continue ends the iteration
+
+### Classes
+* A type of data
+* A template that defines the general properties of a type of object, i.e., the definition of the object
+* A template for creating objects
+* A recipe for a dish
+* 3 types of classes
+	* An user interface class
+	* Helper class. (Tool box)
+	* Programmer-defined class (To create actual objects)
+* An object is a piece of a type of data
+* An object is an actual entity, instead of the concept that defines the kind of entity
+* Methods for behaviours
+* Instance variables for properties
