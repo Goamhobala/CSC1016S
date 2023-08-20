@@ -203,7 +203,7 @@ System.out.println(j);
 	* continue ends the iteration
 
 ### Classes
-* A type of data
+* A type of data (A programmer defined type)
 * A template that defines the general properties of a type of object, i.e., the definition of the object
 * A template for creating objects
 * A recipe for a dish
@@ -215,3 +215,30 @@ System.out.println(j);
 * An object is an actual entity, instead of the concept that defines the kind of entity
 * Methods for behaviours
 * Instance variables for properties
+
+### Primitive type vs Class type values
+* Primitive type values is a single piece of data.
+* Class type values can carry multiple pieces of data and actions known as methods.
+* Primitives are value type whereas objects and enums are reference type
+
+### Methods
+```java
+public static void main(String[] args){
+	System.out.println("The first line is known as the header");
+}
+```
+
+### Common methods that a class should have
+* Constructor for default values, e.g. 
+```java
+this();
+super();
+```
+*  equals() Returns a boolean that checks if two instances of the same type are equal.
+	* Generally, this is done by comparing instance variables
+```java
+String x = "Shohei Ohtani";
+x.equals("Shohei Ohtani");
+```
+* toString(): Returns a string representation of the object.
+* Getters and setters for instance variables.

@@ -74,7 +74,7 @@ public class MarketPlace {
       }
       
     private static void outputSellers(ArrayList<Seller> sellers){
-    // This method outputs the each seller in a formatted string. If the array is empty then it outputs none found
+    // This method outputs each seller in a formatted string. If the array is empty then it outputs none found
       if (sellers.size() == 0){
          System.out.println("None found.");
       }
@@ -89,6 +89,7 @@ public class MarketPlace {
         final Scanner inKey = new Scanner(System.in);
         System.out.println("Enter the name of a \"Comma Separated Values\" (CSV) file:");
         final Seller[] sellers = parseFile(inKey.nextLine());
+
         
         if (sellers == null){
          System.out.println("The file contains no seller data.");
@@ -96,9 +97,8 @@ public class MarketPlace {
         }
         
         final ArrayList<Seller> sellersFiltered = new ArrayList<Seller>();
-        
-        System.out.println("Enter the name of a product: ");
-        String productTarget = inKey.nextLine();
+       
+        String productTarget = getInput("Enter the name of a product: ", inKey);
         int numberUnitsTarget = Integer.parseInt(getInput("Enter the number of units required: ", inKey));
         Money priceTarget = new Money(getInput("Enter the maximum unit price: ", inKey), RAND);
             
