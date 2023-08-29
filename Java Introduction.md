@@ -1,3 +1,37 @@
+### Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Origin](#origin)
+- [Translation process](#translation-process)
+- [Objects and Methods](#objects-and-methods)
+- [Application programs](#application-programs)
+- [System.out.println()](#systemoutprintln)
+- [Variables declarations](#variables-declarations)
+- [Naming convention](#naming-convention)
+- [Assignment](#assignment)
+- [Increment and decrement:](#increment-and-decrement)
+- [String](#string)
+- [Importing packages and classes](#importing-packages-and-classes)
+- [Scanner class](#scanner-class)
+- [Be careful when mixing nextline and other next together.](#be-careful-when-mixing-nextline-and-other-next-together)
+- [File input/output](#file-inputoutput)
+- [Null](#null)
+- [If-else](#if-else)
+- [Array:](#array)
+- [For loop](#for-loop)
+- [Classes](#classes)
+- [Primitive type vs Class type values](#primitive-type-vs-class-type-values)
+- [Methods](#methods)
+- [Constructor](#constructor)
+- [Paramaterised Constructor vs Default Constructor](#paramaterised-constructor-vs-default-constructor)
+- [Common methods that a class should have](#common-methods-that-a-class-should-have)
+- [Encapsulation](#encapsulation)
+- [Accessor and Mutator Methods](#accessor-and-mutator-methods)
+- [Static Methods](#Static-Methods)
+
+
+
+
+
 ### Origin
 * Originally created for home appliances in 1991
 
@@ -18,12 +52,12 @@
 
 ```java
 public class Hello{
-	public static void main(String args[]){
+	public static void main(String[] args){
 		System.out.println("Hi mom!");
 	}
 }
 ```
-
+* Everything that comes after the command line that runs the programme will be stored inside the String\[\] args. (Comma separated)
 ### System.out.println()
 * Java programs work by calling objects
 * **System** is a package
@@ -215,7 +249,7 @@ System.out.println(j);
 * An object is an actual entity, instead of the concept that defines the kind of entity
 * Methods for behaviours
 * Instance variables for properties
-
+* [[Class construction]]
 ### Primitive type vs Class type values
 * Primitive type values is a single piece of data.
 * Class type values can carry multiple pieces of data and actions known as methods.
@@ -227,6 +261,34 @@ public static void main(String[] args){
 	System.out.println("The first line is known as the header");
 }
 ```
+
+### Constructor
+```java
+Student s = new Student();
+```
+* The **new** statement (which is actually an operator) allocates space. Once the space has been allocated, the reference to that space is passed to the constructor Student();
+* The constructor(aka initialiser) initialises all the variables associated with Student s
+
+### Paramaterised Constructor vs Default Constructor
+```java
+public class Student{
+	private String name;
+	private String studentNumber; 
+	Student(){
+		this.Student("Test Student", "TESSTU001");
+	}
+	Student(String name, String studentNumber){
+		this.name = name;
+		this.studentNumber = studentNumber;
+	}
+
+}
+```
+* If no arguments are passed to an object's constructor, then the default constructor is used. The parameter constructor is used otherwise.
+* The default constructor allows you to provide default values to the object Student. The if no arguments if provided, the default constructor is invoked, which will itself invoke the parameter constructor using the default values as argument.
+* The "this" keyword refers to the object that's being called.
+
+
 
 ### Common methods that a class should have
 * Constructor for default values, e.g. 
@@ -241,4 +303,53 @@ String x = "Shohei Ohtani";
 x.equals("Shohei Ohtani");
 ```
 * toString(): Returns a string representation of the object.
+	* Note: if an data type has a toString method, then Sytem.out.println(object) automatically invokes the toString method
 * Getters and setters for instance variables.
+
+
+### Encapsulation
+* aka abstraction
+* A sealed unit with the implementation details concealed
+* Information hiding: Knowing the detail is unnecessary because interactions with the object don't require the knowledge of implementation.
+* e.g. bar access to instance variables with private
+* As a rule of thumb, make all instance variables private
+* Interface available to the user of the class contains:
+	* Comments
+	* Method signatures (headings, visibility modifier, return)
+	* Public defined constants (public int DOORS = 4;)
+* [[Visibility Modifiers]]
+
+### Accessor-and-Mutator-Methods
+* getters and setters
+* Most instance variables should have a getter, which is a method that returns a certain instance variable
+* Setters are not always needed. They are methods that mutate certain instance variables.
+
+
+### Static-Variables
+
+```java
+public class Jojo{
+	private static int numJojos = 0;
+	public static final String NICKNAME = "jojo";
+	// Safe to make public since it can't be changed
+	public static void dio(){
+		System.out.println("DIOOOOOO!")
+	}
+}
+```
+```java
+Jojo kujo = new Jojo();
+```
+* Static variables/methods belong to the class itself, instead of certain instances of a class (objects created by the class)
+* Static variables: e.g. to count the number of instances you have created from the class
+* Every instance of a class has access to its static variables
+* It's preferable to explicitly initialise static variables rather than rely on the default initialisation.
+
+### Static-Methods
+* Only has access to static variables
+* Invoked through class name
+* Note that static methods has no "this", since it doesn't belong to any instances
+* You can put main in any class. Only do it if it makes sense to convert the class into a application tho. (Especially useful when the class contains diagnostic code)
+```java
+Jojo.dio();
+```

@@ -1,9 +1,14 @@
+// A class that defines the ticket data type
+// Jing Yeh
+// YHXJIN001
+// 21 Aug 2023
+
 public class Ticket {
-    private Time currentTime;
+    private Time issueTime;
     private String id;
     
     public Ticket(Time currentTime, String ID){
-        this.currentTime = currentTime;
+        this.issueTime = currentTime;
         this.id = ID;
     }
     
@@ -12,10 +17,10 @@ public class Ticket {
     }
     
     public Duration age(Time currentTime){
-        return currentTime.subtract(this.currentTime);
+        return currentTime.subtract(this.issueTime);
     } 
     public String toString(){
-        return String.format("Ticket[id=\"%s\", time=\"%s\"].", this.id, this.currentTime.toString());
+        return String.format("Ticket[id=%s, time=%s]", this.id, this.issueTime.toString());
     }
 }
 

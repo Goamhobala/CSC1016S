@@ -11,24 +11,8 @@
             "id": "e856615975a1835f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e92015f94033ed8d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Java Introduction.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
@@ -37,7 +21,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Java classes.md",
+                "file": "Java Introduction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47859ec1825c7c06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "UML.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,8 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "01e030b22d5789b3",
@@ -172,23 +167,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e92015f94033ed8d",
+  "active": "5bc457ede1dd8509",
   "lastOpenFiles": [
-    "Assignment 5/Additional_Files_Assignment5/Register.class",
-    "Assignment 5/Additional_Files_Assignment5/Register.java",
-    "Assignment 5/Additional_Files_Assignment5/Ticket.class",
-    "Assignment 5/Additional_Files_Assignment5/TimeUnit.class",
-    "Assignment 5/Additional_Files_Assignment5/Duration.class",
-    "Assignment 5/Additional_Files_Assignment5/Time.class",
-    "Assignment 5/Additional_Files_Assignment5/TicketTest2.class",
-    "Assignment 5/Additional_Files_Assignment5/TicketTest2.java",
-    "Assignment 5/Additional_Files_Assignment5/TicketTest2/TicketTest2.java",
-    "Assignment 5/Additional_Files_Assignment5/TicketTest2",
-    "Assignment 5/Additional_Files_Assignment5/TicketTest.java",
-    "Common pitfalls.md",
-    "Java classes.md",
-    "Untitled.md",
+    "Notes/Visibility Modifiers.md",
     "Java Introduction.md",
+    "UML.md",
+    "TestObject.class",
+    "TestObject.java",
+    "Assignment 5/Additional_Files_Assignment5/TestObject.java",
+    "CSC1016S-Notes.html",
+    "CSC1016S-Notes.pdf",
+    "Notes/1. Object design.md",
+    "Notes/2. Memory Models.md",
+    "Notes/Abstract class vs Interface.md",
+    "Notes/Class construction.md",
+    "Notes/Compile time rule and runtime rule for polymorphism.md",
+    "Notes/Inheritance.md",
+    "Notes/Interface and Implementation.md",
+    "Notes/super() and this().md",
+    "Java classes.md",
+    "Translation process.md",
+    "Accessor and Mutator Methods.md",
+    "Assignment 5/Additional_Files_Assignment5/YHXJIN001.zip",
+    "Assignment 5/Additional_Files_Assignment5/Archive.zip",
+    "Assignment 5/Additional_Files_Assignment5/UIDGenerator.class",
+    "Assignment 5/Additional_Files_Assignment5/CarParkSim.java#",
+    "Assignment 5/Additional_Files_Assignment5/Clock.class",
+    "Untitled.md",
+    "Notes/When to use @Override.md",
+    "Notes/Why is string comparison a bad practice in java.md",
+    "Common pitfalls.md",
     "Untitled.canvas",
     "2023-08-08.md"
   ]

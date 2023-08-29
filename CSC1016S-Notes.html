@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Table of Contents</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#origin">Origin</a></li>
+<li><a href="#translation-process">Translation process</a></li>
+<li><a href="#objects-and-methods">Objects and Methods</a></li>
+<li><a href="#application-programs">Application programs</a></li>
+<li><a href="#systemoutprintln">System.out.println()</a></li>
+<li><a href="#variables-declarations">Variables declarations</a></li>
+<li><a href="#naming-convention">Naming convention</a></li>
+<li><a href="#assignment">Assignment</a></li>
+<li><a href="#increment-and-decrement">Increment and decrement:</a></li>
+<li><a href="#string">String</a></li>
+<li><a href="#importing-packages-and-classes">Importing packages and classes</a></li>
+<li><a href="#scanner-class">Scanner class</a></li>
+<li><a href="#be-careful-when-mixing-nextline-and-other-next-together">Be careful when mixing nextline and other next together.</a></li>
+<li><a href="#file-inputoutput">File input/output</a></li>
+<li><a href="#null">Null</a></li>
+<li><a href="#if-else">If-else</a></li>
+<li><a href="#array">Array:</a></li>
+<li><a href="#for-loop">For loop</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#primitive-type-vs-class-type-values">Primitive type vs Class type values</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#constructor">Constructor</a></li>
+<li><a href="#paramaterised-constructor-vs-default-constructor">Paramaterised Constructor vs Default Constructor</a></li>
+<li><a href="#common-methods-that-a-class-should-have">Common methods that a class should have</a></li>
+<li><a href="#encapsulation">Encapsulation</a></li>
+<li><a href="#accessor-and-mutator-methods">Accessor and Mutator Methods</a></li>
+</ul>
+<h3 id="origin">Origin</h3>
+<ul>
+<li>Originally created for home appliances in 1991</li>
+</ul>
+<h3 id="translation-process">Translation process</h3>
+<ul>
+<li>A compiler language</li>
+<li>Before it's compiled into machine code for each processor, java cod (.java) is first converted into java-byte code using the java virtual machine (jvm) (.class file)</li>
+<li>Write-once, run everywhere</li>
+</ul>
+<h3 id="objects-and-methods">Objects and Methods</h3>
+<ul>
+<li>Java is a high level object oriented programming (oop)</li>
+<li>Objects of the same type are said to have the same type, or belong to the same class</li>
+<li>All programming constructs in java are part of a class.</li>
+</ul>
+<h3 id="application-programs">Application programs</h3>
+<ul>
+<li>When a java application program (regular program) is run, the run-time environment automatically invokes the main method</li>
+<li>All application programs must have a main method</li>
+<li>Note that not every class must have a main method. Only the application program, namely the program that's executed first (like index.scss, e.g.)</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Hello</span>{
+	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String args[])</span>{
+		System.out.println(<span class="hljs-string">&quot;Hi mom!&quot;</span>);
+	}
+}
+</code></pre>
+<h3 id="systemoutprintln">System.out.println()</h3>
+<ul>
+<li>Java programs work by calling objects</li>
+<li><strong>System</strong> is a package</li>
+<li><strong>out</strong> is a class</li>
+<li><strong>System.out</strong>: An object used for sending output to the screen</li>
+<li><strong>println</strong> method, moves pointer to beginning of next line</li>
+<li>&quot;Hi mom!&quot; argument</li>
+<li>Actions performed by objects are known as methods</li>
+</ul>
+<h3 id="variables-declarations">Variables declarations</h3>
+<ul>
+<li>When declaring variables, because java is not a dynamic-type language (static type language), you must declare the type of the variable</li>
+<li>Basic types are known as primitive types</li>
+<li>A variable must first be initialised.</li>
+<li>Oftentimes, variables are given an initial values. However, don't rely on this</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">double</span> <span class="hljs-variable">length</span> <span class="hljs-operator">=</span> <span class="hljs-number">10.3</span>; <span class="hljs-comment">//Declaration plus assignment</span>
+<span class="hljs-type">float</span> <span class="hljs-variable">height</span> <span class="hljs-operator">=</span> <span class="hljs-number">180.3f</span>;
+<span class="hljs-type">byte</span> <span class="hljs-variable">number</span> <span class="hljs-operator">=</span> <span class="hljs-number">12</span> <span class="hljs-comment">// 1 byte (-128 t0 127)</span>
+<span class="hljs-type">short</span> <span class="hljs-variable">number2</span> <span class="hljs-operator">=</span> <span class="hljs-number">245</span> <span class="hljs-comment">// 2 bytes (-32768 to 32757)</span>
+<span class="hljs-type">int</span> <span class="hljs-variable">weight</span> <span class="hljs-operator">=</span> <span class="hljs-number">71</span>; <span class="hljs-comment">// 4 bytes (large number)</span>
+<span class="hljs-type">String</span> <span class="hljs-variable">message</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Hi&quot;</span>;
+<span class="hljs-type">boolean</span> <span class="hljs-variable">eat</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;
+<span class="hljs-type">char</span> mom;
+</code></pre>
+<p>Note: String uses double quote, char uses single quote</p>
+<h3 id="naming-convention">Naming convention</h3>
+<ul>
+<li>Classes: FirstClass</li>
+<li>Variables, objects, methods: camelCase</li>
+<li>Constants: MAX_SPEED</li>
+</ul>
+<h3 id="assignment">Assignment</h3>
+<ul>
+<li>Right to left, hence can be chained</li>
+<li>int decimal = 1.00 doesn't work but double one = 1 works</li>
+<li>Hierarchy: Byte -&gt; Short -&gt; (int == char )-&gt;long-&gt; float -&gt; double -&gt;</li>
+<li>Note: When both operands are int, it'll give you a floor integer answer.</li>
+<li>If you want the answer to be in double, type cast one of them.</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> <span class="hljs-number">11</span>;
+<span class="hljs-type">int</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-number">5</span>;
+<span class="hljs-type">double</span> <span class="hljs-variable">answer</span> <span class="hljs-operator">=</span> n / (<span class="hljs-type">double</span>) m;
+
+
+</code></pre>
+<h3 id="increment-and-decrement">Increment and decrement:</h3>
+<ul>
+<li>++n pre-increment, --n pre-decrement</li>
+<li>n++ post-increment, n-- post-decrement likewise.</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">int</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;
+<span class="hljs-type">int</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;
+<span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> n++ + <span class="hljs-number">2</span>; <span class="hljs-comment">// x = 5</span>
+<span class="hljs-type">int</span> <span class="hljs-variable">y</span> <span class="hljs-operator">=</span> --m + <span class="hljs-number">2</span>; <span class="hljs-comment">// y = 4</span>
+</code></pre>
+<h3 id="string">String</h3>
+<ul>
+<li>Not a primitive data type</li>
+<li>Is an object, and therefore has methods associated with it</li>
+<li>Immutatble: A new object is created everytime a change is made</li>
+<li>When a string is combined with another</li>
+<li>Note: When comparing string, use .equals() method instead of == (because they're different objects)</li>
+<li>Use charAt to access the character</li>
+<li>It is iterable</li>
+<li>printf is an example of legacy code (things from originally migrated from other programming languages)</li>
+</ul>
+<pre><code class="language-java">System.out.println(<span class="hljs-string">&quot;&quot;</span>)<span class="hljs-comment">//Print with a new line</span>
+System.out.print(<span class="hljs-string">&quot;&quot;</span>)<span class="hljs-comment">// Print without a new line</span>
+System.out.printf(<span class="hljs-string">&quot;formatSpecifiers&quot;</span>, value1, value2)<span class="hljs-comment">// Print with formatting (Look up the syntax) Default right align</span>
+<span class="hljs-comment">/*
+- % indicates start of specifier
+- int justifying characters
+- .int rounding
+-  
+*/</span>
+</code></pre>
+<h3 id="importing-packages-and-classes">Importing packages and classes</h3>
+<pre><code class="language-java"><span class="hljs-keyword">import</span> java.text.NumberFormat;
+<span class="hljs-comment">//OR</span>
+<span class="hljs-keyword">import</span> java.text.*;
+
+</code></pre>
+<h3 id="scanner-class">Scanner class</h3>
+<ul>
+<li>Part of the java util library</li>
+<li>Allows you to access keyboard inp</li>
+<li>Separator is whitespace (unlike python which uses new line)</li>
+<li>nextIn() for integers, nextDouble for doubles etc.</li>
+<li>next() vs nextLine: Reads from the current position on the line to the end of line. (ends at but excludes \n)</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-keyword">import</span> java.util.Scanner
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Example</span>{
+	
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Time[] getInputs(){  
+    
+      <span class="hljs-keyword">try</span> (<span class="hljs-type">Scanner</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in)){  
+         System.out.println(<span class="hljs-string">&quot;Enter time A:&quot;</span>);  
+         <span class="hljs-type">Time</span> <span class="hljs-variable">timeBefore</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Time</span>(input.nextLine());  
+         System.out.println(<span class="hljs-string">&quot;Enter time B:&quot;</span>);  
+         <span class="hljs-type">Time</span> <span class="hljs-variable">timeAfter</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Time</span>(input.nextLine());  
+      }  
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Time</span>[]{timeBefore, timeAfter};  
+                
+   }
+}
+</code></pre>
+<h3 id="be-careful-when-mixing-nextline-and-other-next-together">Be careful when mixing nextline and other next together.</h3>
+<pre><code class="language-java\">int n = input.nextInt();
+//NB: s1 is empty since n ends with an white space. It moves the pointer to the next line (you don't actually need the assignment)
+String s1 = keyboard.nextLine(); 
+String s2 = keyboard.nextLine();
+</code></pre>
+<h3 id="file-inputoutput">File input/output</h3>
+<ul>
+<li>Scanner class can also be used to read files</li>
+<li>Other classes to use</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-keyword">import</span> java.io.FileInputStream;
+<span class="hljs-keyword">import</span> java.io.FileNotFoundException;
+
+</code></pre>
+<ul>
+<li>Use try and catch to open file</li>
+<li>Use nextLine(), nextInt() to read from Scanner like reading from console</li>
+</ul>
+<h3 id="null">Null</h3>
+<ul>
+<li>Means there's something there but the something there is nothing</li>
+</ul>
+<h3 id="if-else">If-else</h3>
+<ul>
+<li>You can add ; to the end of a if block, to isolated nested if block for example.</li>
+</ul>
+<h3 id="array">Array:</h3>
+<ul>
+<li>A data structure to process a collection of data</li>
+<li>Static type in java</li>
+<li>Builtin java array is static. i.e. Size fixed</li>
+<li>To use dynamic array use ArrayList</li>
+<li>Strict type</li>
+<li>The <strong>length public instance variable</strong> gives you the maximum number of values (the array size), instead of the actual number of values</li>
+<li>Declare a counter to store the number of values
+Syntax:</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">double</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-title class_">double</span>[<span class="hljs-number">5</span>]; <span class="hljs-comment">// array of size 5]</span>
+String[] mangas = {<span class="hljs-string">&quot;Gintama&quot;</span>, <span class="hljs-string">&quot;Chainsaw man&quot;</span>}; <span class="hljs-comment">// array of size 2</span>
+
+</code></pre>
+<h3 id="for-loop">For loop</h3>
+<pre><code class="language-java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i; i &lt; <span class="hljs-number">10</span>; i++){
+	System.out.println(i);
+}
+</code></pre>
+<ul>
+<li>Can change counter within the loop. You can even omit the updater</li>
+<li>Initialise -&gt; test -&gt; body -&gt; update</li>
+<li>Since update comes last, ++i and i++ make no difference</li>
+<li>If leave boolean expression blank, then infinite loop</li>
+<li>You can also leave the initialiser out, if you've pre-declared the variable already. This allows you to access the counter outside of the loop</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;
+<span class="hljs-keyword">for</span> (;j&lt; <span class="hljs-number">17</span>;j++){
+   System.out.println(j);
+}   
+     
+System.out.println(j);
+</code></pre>
+<ul>
+<li>exit, break, continue
+<ul>
+<li>exit ends the program immediately</li>
+<li>break ends the loop</li>
+<li>continue ends the iteration</li>
+</ul>
+</li>
+</ul>
+<h3 id="classes">Classes</h3>
+<ul>
+<li>A type of data (A programmer defined type)</li>
+<li>A template that defines the general properties of a type of object, i.e., the definition of the object</li>
+<li>A template for creating objects</li>
+<li>A recipe for a dish</li>
+<li>3 types of classes
+<ul>
+<li>An user interface class</li>
+<li>Helper class. (Tool box)</li>
+<li>Programmer-defined class (To create actual objects)</li>
+</ul>
+</li>
+<li>An object is a piece of a type of data</li>
+<li>An object is an actual entity, instead of the concept that defines the kind of entity</li>
+<li>Methods for behaviours</li>
+<li>Instance variables for properties</li>
+<li>[[Class construction]]</li>
+</ul>
+<h3 id="primitive-type-vs-class-type-values">Primitive type vs Class type values</h3>
+<ul>
+<li>Primitive type values is a single piece of data.</li>
+<li>Class type values can carry multiple pieces of data and actions known as methods.</li>
+<li>Primitives are value type whereas objects and enums are reference type</li>
+</ul>
+<h3 id="methods">Methods</h3>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>{
+	System.out.println(<span class="hljs-string">&quot;The first line is known as the header&quot;</span>);
+}
+</code></pre>
+<h3 id="constructor">Constructor</h3>
+<pre><code class="language-java"><span class="hljs-type">Student</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();
+</code></pre>
+<ul>
+<li>The <strong>new</strong> statement (which is actually an operator) allocates space. Once the space has been allocated, the reference to that space is passed to the constructor Student();</li>
+<li>The constructor(aka initialiser) initialises all the variables associated with Student s</li>
+</ul>
+<h3 id="paramaterised-constructor-vs-default-constructor">Paramaterised Constructor vs Default Constructor</h3>
+<pre><code class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>{
+	<span class="hljs-keyword">private</span> String name;
+	<span class="hljs-keyword">private</span> String studentNumber; 
+	Student(){
+		<span class="hljs-built_in">this</span>.Student(<span class="hljs-string">&quot;Test Student&quot;</span>, <span class="hljs-string">&quot;TESSTU001&quot;</span>);
+	}
+	Student(String name, String studentNumber){
+		<span class="hljs-built_in">this</span>.name = name;
+		<span class="hljs-built_in">this</span>.studentNumber = studentNumber;
+	}
+
+}
+</code></pre>
+<ul>
+<li>If no arguments are passed to an object's constructor, then the default constructor is used. The parameter constructor is used otherwise.</li>
+<li>The default constructor allows you to provide default values to the object Student. The if no arguments if provided, the default constructor is invoked, which will itself invoke the parameter constructor using the default values as argument.</li>
+<li>The &quot;this&quot; keyword refers to the object that's being called.</li>
+</ul>
+<h3 id="common-methods-that-a-class-should-have">Common methods that a class should have</h3>
+<ul>
+<li>Constructor for default values, e.g.</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-built_in">this</span>();
+<span class="hljs-built_in">super</span>();
+</code></pre>
+<ul>
+<li>equals() Returns a boolean that checks if two instances of the same type are equal.
+<ul>
+<li>Generally, this is done by comparing instance variables</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-java"><span class="hljs-type">String</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Shohei Ohtani&quot;</span>;
+x.equals(<span class="hljs-string">&quot;Shohei Ohtani&quot;</span>);
+</code></pre>
+<ul>
+<li>toString(): Returns a string representation of the object.</li>
+<li>Getters and setters for instance variables.</li>
+</ul>
+<h3 id="encapsulation">Encapsulation</h3>
+<ul>
+<li>aka abstraction</li>
+<li>A sealed unit with the implementation details concealed</li>
+<li>Information hiding: Knowing the detail is unnecessary because interactions with the object don't require the knowledge of implementation.</li>
+<li>e.g. bar access to instance variables with private</li>
+<li>As a rule of thumb, make all instance variables private</li>
+<li>Interface available to the user of the class contains:
+<ul>
+<li>Comments</li>
+<li>Method signatures (headings, visibility modifier, return)</li>
+<li>Public defined constants (public int DOORS = 4;)</li>
+</ul>
+</li>
+<li>[[Visibility Modifiers]]</li>
+</ul>
+<h3 id="accessor-and-mutator-methods">Accessor and Mutator Methods</h3>
+<ul>
+<li>getters and setters</li>
+<li>Most instance variables should have a getter, which is a method that returns a certain instance variable</li>
+<li>Setters are not always needed. They are methods that mutate certain instance variables.</li>
+</ul>
+
+        
+        
+    </body>
+    </html>

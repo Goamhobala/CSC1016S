@@ -1,0 +1,6 @@
+The main differences between them two are that abstract classes can provide both abstract and non-abstract methods (methods with the implementation details) with any modifiers, whereas methods of interfaces are implicitly public, i.e. public or public static final. (Interfaces can have private methods, but they are not included in the contract and therefore aren't inherited or implemented [[Interface and Implementation]]); interfaces support multiple inheritance whereas abstract classes do not; Abstract classes can override methods from the Object class, whereas interfaces cannot; A class can implement multiple interfaces whereas it can only extend from one abstract class. If the defaults methods of the implemented interfaces conflicted with each other, use the syntax "InterfaceName.super.methodName()"
+
+
+### Default methods in interfaces vs non-abstract methods in abstract classes
+
+* Non-abstract methods have access to the state of the objects (e.g. private color) whereas default methods do not

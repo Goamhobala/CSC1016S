@@ -14,8 +14,19 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "5f36bb162da94d05",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.7"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,6 +149,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "287adca298622eb8",
+  "active": "5f36bb162da94d05",
   "lastOpenFiles": []
 }
