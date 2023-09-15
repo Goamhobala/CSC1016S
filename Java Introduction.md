@@ -58,6 +58,18 @@ public class Hello{
 }
 ```
 * Everything that comes after the command line that runs the programme will be stored inside the String\[\] args. (Comma separated)
+e.g.
+```java
+2 public class Test {  
+3     
+4    public static void main(String[] args){  
+5      for (String arg: args){  
+6         System.out.println(arg);  
+7      }  
+8    }  
+9  }
+```
+* If you run "java Test.java huh kokonut", then the output will be huh kokonut
 ### System.out.println()
 * Java programs work by calling objects
 * **System** is a package
@@ -205,9 +217,10 @@ import java.io.FileNotFoundException;
 * Strict type
 * The **length public instance variable** gives you the maximum number of values (the array size), instead of the actual number of values
 * Declare a counter to store the number of values
+* Arrays are instances of a class
 Syntax:
 ```java
-double[] numbers = new double[5]; // array of size 5]
+double[] numbers = new double[5]; // array of size 5, create 20 instance variables that will be initialised to null
 String[] mangas = {"Gintama", "Chainsaw man"}; // array of size 2
 
 ```
@@ -261,6 +274,16 @@ public static void main(String[] args){
 	System.out.println("The first line is known as the header");
 }
 ```
+
+### Method-Overloading
+* An example of polymorphism (poly: many, morph: form)
+* It allows you to create multiple versions of a method that do slightly different things
+* They must have different parameter list (regardless of return type of the method), due to java's compilation process.
+* An example will be default constructor vs parameter constructor. If no arguments are passed to an object's constructor, then the default constructor is used. The parameter constructor is used otherwise.
+* Note: This should not be confused with **method overriding**
+	* Method overloading refers to having multiple methods in the same class with the same name but different parameter lists.
+	* Method overriding means having a method in the child class with the same name and same parameter as the one in its parent class
+	* The annotation @Override ensures method overriding. [[When to use @Override]]erd
 
 ### Constructor
 ```java
@@ -353,3 +376,116 @@ Jojo kujo = new Jojo();
 ```java
 Jojo.dio();
 ```
+
+### Wrapper Class
+* A class type corresponding to each primitive type
+* Prior to java 5, you need to box and unbox. That is, convert the data between wrapper classes and their corresponding primitive types
+* Can be used interchangeably to a certain degree.
+* Doesn't have no argument constructor
+```java
+// Automatic casting
+Integer myInt = 5;
+Integer myInt2 = new Integer(2);
+```
+* Numerical wrapper classes have useful constants such as MAX_VALUE, MIN_VALUE
+* Some useful methods (Note that these methods are static)
+```java
+// String to number
+Integer.parseInt("5");
+Long.parseLong("3");
+Double.parseDouble("5.32");
+Double.toString(5.32);
+```
+
+### Variables and Memory
+* Main memory: RAM
+* Secondary memory: Hard Drive
+* Primitive type variables: Pass by value. (Location stored in a table known as **stack**)
+* Class type variables: Pass by reference. Variables store the memory location. (The location in heap memory)
+* Two reference variables can contain the same reference
+* Note: If your instance variable is an class type value, then you should return a deep copy of it instead of shallow copy to avoid privacy leaks
+```java
+Jojo kujo = new Jojo();
+Jojo starPlatinum = kujo;
+```
+* Both kujo and starPlatinum are pointing to the same object.
+
+### Parameters
+* All parameters are call-by-value:
+* A parameter is a local variable that is set equal to the value of its arguments
+* Class parameters, since they are passed by reference. If the parameter changes the instance variables of that instance, those changes will be visible outside as 
+* A method cannot change the value of a variable of a primitive type that is an argument to the method
+* However, a method can change the values of the instance variables of a class type that is an argument to the method.
+* Note: Class type variables can lead to privacy leaks: e.g. Having pointers inside the class that points to a parameter, which originated from outside the class
+```java
+
+```
+
+### Take an infinite amount to parameters
+* Note: The arguments must be of the same type
+```java
+public doSth(int... args){
+	for (int num : args){
+		System.out.println(num);
+	}
+}
+```
+### Null
+* A special constant that may be assigned to a variable of any class type
+* Use to indicate that a variable has no value
+* Not an object, but rather a places holder for a reference that does not name any memory location
+* Therefore, a method cannot be invoked using a variable that is initialised to null (Throws **Null Pointer Exception**)
+* Note: Primitive types are not initialised to null.
+
+### Anonymous Objects
+```java
+Money m = new Money("R10", new Currency("ZAR", "R", 100));
+```
+* In this case, the currency object is an anonymous object
+
+### Copy Constructor
+* A constructor with a single argument of the same type as the class
+* To create a clone of the object (A deep copy, in contrast top shallow copy) 
+* Therefore, you'll end up with two instances
+* Note: A class should typically consist of three constructors: Copy (Necessary for mutable types), Default(When not needed, make it private), and the vanilla one.
+
+### Inheritance
+* A general (parent) class is first defined.
+* A specialised class (child) class that inherits a parent class will have all the instance variables and methods of that class.
+* Promotes code-resusablity
+* To inherit a class, use the keyword **extends**
+* Note that you can only extend one class
+```java
+public class Poop extends OrganicSubstance{
+
+}
+```
+* In this case, Poop will inherit the property(instance variable) CH and the method burn().
+* Of course, you can add instance variables and methods to the class Poop, e.g. methods such as 
+* Note: private instance variables are also inherited, but they can't be directly accessed within the child class (needs get and set)
+* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

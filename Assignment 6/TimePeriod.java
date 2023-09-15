@@ -25,7 +25,7 @@ public class TimePeriod {
         return (this.upperBound().compareTo(other.lowerBound()) <= 0);
     }
     
-    public boolean adjecent(TimePeriod other){
+    public boolean adjacent(TimePeriod other){
 //        return this.lowerBound other
         return (this.upperBound().compareTo(other.lowerBound()) == 0 || this.lowerBound().compareTo(other.upperBound()) == 0); 
     }

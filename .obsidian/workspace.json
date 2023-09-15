@@ -33,14 +33,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "UML.md",
+                "file": "Java Introduction.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -167,17 +167,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5bc457ede1dd8509",
+  "active": "47859ec1825c7c06",
   "lastOpenFiles": [
-    "Notes/Visibility Modifiers.md",
-    "Java Introduction.md",
+    "Assignment_7/YHXJIN001.zip",
+    "Assignment_7/Archive.zip",
+    "Assignment_7/TestEmployee.class",
+    "Assignment_7/Employee.class",
+    "SIPP Essay",
+    "untitled folder",
+    "Assignment_7/TestEmployee.java",
+    "Assignment_7/Employee.java",
+    "Assignment_7/Week.class",
+    "Assignment_7/Shift.class",
+    "Assignment_7/TimeUnit.class",
     "UML.md",
-    "TestObject.class",
-    "TestObject.java",
-    "Assignment 5/Additional_Files_Assignment5/TestObject.java",
-    "CSC1016S-Notes.html",
-    "CSC1016S-Notes.pdf",
+    "Java classes.md",
+    "Common pitfalls.md",
+    "Java Introduction.md",
     "Notes/1. Object design.md",
+    "Notes/Visibility Modifiers.md",
     "Notes/2. Memory Models.md",
     "Notes/Abstract class vs Interface.md",
     "Notes/Class construction.md",
@@ -185,18 +193,11 @@
     "Notes/Inheritance.md",
     "Notes/Interface and Implementation.md",
     "Notes/super() and this().md",
-    "Java classes.md",
     "Translation process.md",
     "Accessor and Mutator Methods.md",
-    "Assignment 5/Additional_Files_Assignment5/YHXJIN001.zip",
-    "Assignment 5/Additional_Files_Assignment5/Archive.zip",
-    "Assignment 5/Additional_Files_Assignment5/UIDGenerator.class",
-    "Assignment 5/Additional_Files_Assignment5/CarParkSim.java#",
-    "Assignment 5/Additional_Files_Assignment5/Clock.class",
     "Untitled.md",
     "Notes/When to use @Override.md",
     "Notes/Why is string comparison a bad practice in java.md",
-    "Common pitfalls.md",
     "Untitled.canvas",
     "2023-08-08.md"
   ]

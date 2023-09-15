@@ -24,6 +24,8 @@ public class Time implements Comparable<Time> {
      * If the given value exceeds a twenty four hour period then it is "wrapped around". 
      * So for example, a duration of 25.5 hours produces a Time object representing the value 01:30.
      * 
+     * If the given value is negative then it is added to 24 hours to get a time.
+     * 
      * @param duration the value representing the desired time.
      */
     public Time(Duration duration) {
@@ -105,10 +107,10 @@ public class Time implements Comparable<Time> {
     
     /**
      * Obtain the period between this time and the given time by subtracting the latter 
-     * from the former.
+     * from the former. 
      */
     public Duration subtract(Time other) {
-        return subtract(other.asDuration()).asDuration();
+        return this.asDuration().subtract(other.asDuration());
     }
         
     /**

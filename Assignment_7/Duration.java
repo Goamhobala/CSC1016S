@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 
  * 
  * @author Stephan Jamieson
- * @version 16/08/2019
+ * @version 28/05/2010
  */
 public class Duration implements Comparable<Duration> {
     

@@ -1,50 +1,26 @@
+// A class that defines the ticket data type
+// Jing Yeh
+// YHXJIN001
+// 21 Aug 2023
 
-/**
- * A Ticket object represents a car park ticket. It has a unique ID and time of issue (24 hour clock).
- * 
- * @author Stephan Jamieson
- * @version 29/9/10
- */
 public class Ticket {
-
-    private String id;
     private Time issueTime;
-    private boolean valid;
+    private String id;
     
-    /**
-     * Create a new Ticket that has the given issue time and a unique ID.
-     */
-    public Ticket(final Time issueTime) {
-        this.id = UIDGenerator.makeUID();
-        this.issueTime = issueTime;
+    public Ticket(Time currentTime, String ID){
+        this.issueTime = currentTime;
+        this.id = ID;
     }
     
-    /**
-     * Obtain the ID of this Ticket.
-     */
-    public String ID() { 
-        return id; 
-    }
-        
-    /**
-     * Obtan the issue time for this ticket.
-     */
-    public Time issueTime() { 
-        return issueTime;
+    public String ID(){
+        return this.id;    
     }
     
-    /**
-     * Given the current time, determine this ticket's age i.e. subtract issue time from current time.
-     */
-    public Duration age(final Time currentTime) { 
-        return currentTime.subtract(issueTime());
-    }
-
-    
-    /**
-     * Obtain a String representation of this Ticket in the form 'Ticket[id="dddddddd", time="hh:mm:ss", <valid/void>]'.
-     */
-    public String toString() {
-        return "Ticket[id="+id+", time="+issueTime+"]";
+    public Duration age(Time currentTime){
+        return currentTime.subtract(this.issueTime);
+    } 
+    public String toString(){
+        return String.format("Ticket[id=%s, time=%s]", this.id, this.issueTime.toString());
     }
 }
+
