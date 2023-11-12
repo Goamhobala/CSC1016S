@@ -11,8 +11,24 @@
             "id": "e856615975a1835f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Week1/2023-09-28.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "91d88ab96342ead9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-10-04.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -106,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Java Introduction.md",
+                "file": "Week1/2023-09-28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Java Introduction.md",
+                "file": "Week1/2023-09-28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Java Introduction.md"
+                "file": "Week1/2023-09-28.md"
               }
             }
           }
@@ -167,32 +183,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "47859ec1825c7c06",
+  "active": "395bf7ed87585717",
   "lastOpenFiles": [
-    "Assignment_7/YHXJIN001.zip",
-    "Assignment_7/Archive.zip",
-    "Assignment_7/TestEmployee.class",
-    "Assignment_7/Employee.class",
-    "SIPP Essay",
-    "untitled folder",
-    "Assignment_7/TestEmployee.java",
-    "Assignment_7/Employee.java",
-    "Assignment_7/Week.class",
-    "Assignment_7/Shift.class",
-    "Assignment_7/TimeUnit.class",
+    "GUI/GUI_Test/bin/main/MainWindow.class",
+    "GUI/GUI_Test/src/main/MainWindow.java",
+    "GUI/GUI_Test/bin/module-info.class",
+    "GUI/GUI_Test/bin/main/Main.class",
+    "GUI/GUI_Test/src/main/Main.java",
+    "GUI/GUI_Test/bin/main",
+    "GUI/GUI_Test/src/main",
+    "GUI/GUI_Test/src/module-info.java",
+    "GUI/GUI_Test/src",
+    "GUI/GUI_Test/bin",
+    "GUI/GUI_Test",
+    "2023-10-04.md",
+    "Week1/2023-09-28.md",
+    "Java Introduction.md",
+    "Notes/super() and this().md",
+    "Notes/1. Object design.md",
+    "Notes/Class construction.md",
+    "Notes/Visibility Modifiers.md",
+    "Notes/Inheritance.md",
     "UML.md",
     "Java classes.md",
     "Common pitfalls.md",
-    "Java Introduction.md",
-    "Notes/1. Object design.md",
-    "Notes/Visibility Modifiers.md",
     "Notes/2. Memory Models.md",
     "Notes/Abstract class vs Interface.md",
-    "Notes/Class construction.md",
     "Notes/Compile time rule and runtime rule for polymorphism.md",
-    "Notes/Inheritance.md",
     "Notes/Interface and Implementation.md",
-    "Notes/super() and this().md",
     "Translation process.md",
     "Accessor and Mutator Methods.md",
     "Untitled.md",

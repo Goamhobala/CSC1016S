@@ -24,9 +24,41 @@
                 "currentVersion": "1.3.7"
               }
             }
+          },
+          {
+            "id": "055792dcb67b5c53",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.12"
+              }
+            }
+          },
+          {
+            "id": "c849d095dcfbe890",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
+          },
+          {
+            "id": "f1f8efbdfc82883c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "2023-09-28.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -92,6 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2023-09-28.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -108,6 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2023-09-28.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +163,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2023-09-28.md"
+              }
             }
           }
         ]
@@ -149,6 +185,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5f36bb162da94d05",
-  "lastOpenFiles": []
+  "active": "f1f8efbdfc82883c",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "2023-09-28.md"
+  ]
 }

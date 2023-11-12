@@ -1,3 +1,8 @@
+//A shift object represents a given shift
+//Jing Yeh
+//YHXJIN001
+//14 September 2023 
+
 public class Shift{
     private CalendarTime start;
     private CalendarTime finish;

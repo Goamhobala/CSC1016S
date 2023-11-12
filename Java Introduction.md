@@ -27,6 +27,7 @@
 - [Encapsulation](#encapsulation)
 - [Accessor and Mutator Methods](#accessor-and-mutator-methods)
 - [Static Methods](#Static-Methods)
+- [[#Super]]
 
 
 
@@ -463,29 +464,301 @@ public class Poop extends OrganicSubstance{
 * In this case, Poop will inherit the property(instance variable) CH and the method burn().
 * Of course, you can add instance variables and methods to the class Poop, e.g. methods such as 
 * Note: private instance variables are also inherited, but they can't be directly accessed within the child class (needs get and set)
+
+### Child Class
+* The child class inherits all the public methods and instance variables of the parent class
+* Can add its own methods and instance variables
+* In the child class's constructor, if super() is not called, then java automatically adds it for you.
+* When instantiating the child class, all instance variables of the parent class will be initialised first. [[Class construction]]
+* When overriding methods, you cannot change the return type unless the return type is a parent class type, in which case you can change it the child class type
+* This is known as a covariant return type
+* Can change the visibility modifiers from **less visible to more visible**, but not the other way around.
+* Has the type of itself and its ancestors as well
+* Thus, since ArrayList implements List, you can also do this
+```java
+List<int> example = new ArrayList<int>()
+```
+### Overloading vs Overriding
+
+* Method overloading refers to having multiple methods in the same class with the same name but different parameter lists.
+* Method overriding means having a method in the child class with the same name and same parameter as the one in its parent class
+* The annotation @Override ensures method overriding. [[When to use @Override]]
+* Use **final** to prevent overriding
+* When overriding methods, you can make it more visible (permissible), but not the other way around.
+
+### Super
+* A keyword that refers to the parent class
+* super() must always be called first (The variables of the parent class must always be initialised first)
+```java
+public Child(int age, int height){
+	super(age);
+	this.height = height;
+}
+```
+[[super() and this()]]
+
+
+### The Object Class
+* "The Adam class": every class is a descendant of it
+* Has some methods that every class inherits, e.g., equals(), toString(), clone();
+
+### Equals method
+```java
+public boolean equals(object other){
+	if (other == null){
+		return false;
+	}
+	else if (getClass().equals(other.getClass())){
+		return false
+	}
+	else{
+	.......
+	}
+
+}
+```
+
+
+### getClass vs instanceof
+
+* instanceof() returns true as long as the class is a descendant of the class (<=)
+* Whereas getClass returns the memory location of the class (not the instance)
+* Note: every descendant of the Object class has a static variable "class" that allows you to compare it to the getClass();
+## Polymorphism
+#### Introduction
+* many forms
+* Many definitions to one method name
+* Through late binding and dynamic binding
+####  Binding
+* Binding refers to associating a method definition with a method invocation
+* If the association happens during the compiling stage, it's called **early binding**
+* If the association happens when the method is invoked, i.e. during run time, it's called **late binding** or **dynamic binding**. 
+* In this example, equals is an example of late binding since both Person and Jojo have the equals method, and Jojo's equals() overrides the Person's. getName() is an example of early binding as Jojo simply inherits the method from Person.
+* Note: no late binding for static methods
+* Note: **final** indicates that you can't override the method
+```java
+public class Person{
+	private String name;
+
+	public Person(String name){
+		this.name = name;
+	}
+
+	public boolean equals(Object other){
+		if (other == null){
+			return false;
+		}
+		else if (getClass() != other.getClass()){
+			return false;
+		}
+		else{
+			return other.getName().equals(this.name);
+		}
+
+	}
+	public String getName(){
+		return this.name;
+	}
+}
+
+public class Jojo extends Person{
+	private String name;
+	private String stand;
+
+	public Jojo(String name, String stand){
+		super(name);
+		this.stand = stand;
+	}
+
+	public boolean equals(Object other){
+		''''
+	}
+
+}
+```
+
+#### Upcasting
+```java
+List<int> l = new ArrayList<int>
+```
+* When you call l.add(), the add method of the ArrayList is invoked rather than the one for List.
+* Reason: Late binding
+* Only works if the method also exists in one of the ancestor classes. E.g. Suppose that ArrayList has a method poop() that's not in any of its ancestor class, then you can't call l.poop();
+* To do that you need to downcast
+```java
+l.poop(); //won't work
+((ArrayList) l).poop()// works
+```
+
+
+
+#### Downcasting
+
+```java
+int first = (ArrayList) l[0];
+```
+* Note the above example is only for illustration purpose, you don't have to do this in real life
+* For downcasting to happen, the object has to be upcasted first.
+
+### Interface
+* Basically an abstract class with 100% abstraction
+* Only method signatures
+* Collection of methods for a specific purpose. E.g., the concept of ordering, with methods such as precedes(), follows(), etc.
+* Use the keyword **implements** instead of **extends**
+* You can't have multiple inheritance in java (to prevent methods of the same name), but you can implement multiple interfaces
+* Everything of an interface should be public
+* An interface can implement another interface.
+* A **contract**
+* Shared functionality, but not shared implementations.
+* Constants must be public static final.
+```java
+public class Murakami extends Existentialist implements Writer{
+
+}
+
+```
+* You can't instantiate an interface, but you can upcast, i.e.
+```java
+Writer m = new Murakami();
+```
+### Interface vs Abstract Class
+* Both are types
+	* Method parameter type
+	* Variable type
+* 
+```markdown
+| Header 1 | Header 2 |
+| -------- | -------- |
+| For set of functions of classes | Ideal for hierarchy of functions|
+| Item 4 | Item 5 |
+```
+
+
+### Methods/Constants with same name
+Compile time errors (Might be run time, but still not gonna work):
+*  Constants with same name but different values
+* Methods with same name but different return types
+
+Runs fine:
+* Same names, same return types (Doesn't make sense however.)
+* Same names, different parameter types (method overloading)
+
+### Marker Interface
+* Empty interface (No constants/method signatures)
+* Used to tag a class as having certain properties but not necessarily enforced.
+* e.g. Cloneable (used to indicate that the clone() method can be used safely)
+* e.g.2 Serialisable (Implements file I/O in a particular way.)
+
+### Normal Interfaces
+* e.g. Comparable (ordered/ranked/sorted)
+	* Has only one method signature: compareTo(Object other)
+	* negative int if this precedes other
+	* 0 if same
+	* positive if other precedes this
+* Generic class = parameterised class: Enables code to be applied to any class
+
+### ArrayList
+```java
+import java.util.ArrayList
+
+ArrayList<Poo> p = new ArrayList<Poo>()
+p.add(new Poo());
+p.add(1, new Poo()); // The index must be >= 0 and <= current size of the Array.
+p.set(int index, item); // Returns the object that previously occupied the position
+p.remove(Object theElement);// Returns boolean. Uses the equals() method
+p.remove(int index); // Returns the element.
+p.removeRange(int fromIndex, int toIndex);
+
+```
+* Dynamic size
+* (Behind the scene: create new array -> repopulate)
+* Cons
+	* Base type must be class type (Reference type). Can't be primitive type. (Not really an issue since there's automatic boxing and unboxing)
+	* **clone()** method returns a shallow copy.
+* More efficient if you specified the size ahead of time (initial value is 10)
+* Implements the Collection interface
+* Collections.sort(Comparable c)
+* All classes that implements the collection interface can use the for-each loop
+* Note: You can't make changes to the collection object inside a for-each loop
 * 
 
+### Generics
+* Need to specify the base type
+* e.g. ArrayList\<Poo>
+* Create **classes, interfaces, methods**, that work with different data types
+* A type parameter can have any reference type
+```java
 
+public class GenericTest{
+    public static void main(String[] args){
+        String test = new String("Test!!!!!!!");
+        GenericExample<String> g = new GenericExample<String>(test);
+        System.out.println(g.getData());
+    }
+}
+class GenericExample<T>{
+    private T data;
+    public GenericExample(T data){
+        this.data = data;
+    }
+    public void setData(T newData){
+        this.data = newData;
+    }
+    public T getData(){
+        return this.data;
+    }
 
+}
+```
+* Can't have an array of generic objects
+* Can't be exception class
+* Can have multiple type parameters
+```java
+public class Calc<T1, T2>{
+}
+```
+```java
+public class Gen<T1, T2>{
+}
+class GenChild<T, T1, T2> extends Gen<T1, T2>{} // This is allowed
+class GenChild2<T> extends Gen<T1, T2>{} // Not allowed
+```
 
+### Bounds of type parameter
+* To limit what can be applied to the type parameter
+* e.g.
+```java
+public class Gen<T extends Comparable>{}
+```
+* This translates to T must be a class that **implements** the **Interface** Comparable
+* e.g.2
+```java
+public class Gen<T extends ClassA & InterfaceA & InterfaceB>
+```
+* Note that the type parameter can only extend one class but can implement multiple interfaces.
 
+### Stack
+* Last in first out
+* consists of push() (adding something to the start of the list) and pop() (Removing the first item and returns it);
+```java
+Stack s = new Stack();
+s.push(1);
+//[1]
+s.push(2);
+//[2, 1]
+s.pop();
+//[1]
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Queue
+* Remove data in the same order in which they were added
+* i.e. first in first out
+* Consists of enqueue() and dequeue();
+```java
+Queue q = new Queue();
+q.enqeue(1);
+[1];
+q.enqeue(2);
+[1, 2];
+q.deqeue();
+```
