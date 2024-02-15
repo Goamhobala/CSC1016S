@@ -374,6 +374,15 @@ Jojo kujo = new Jojo();
 * Invoked through class name
 * Note that static methods has no "this", since it doesn't belong to any instances
 * You can put main in any class. Only do it if it makes sense to convert the class into a application tho. (Especially useful when the class contains diagnostic code)
+* Static methods are inherited but not overridden. i.e. They are merely hidden. 
+ ```java
+ // Suppoese B extneds A
+ A a = new B();
+ a.staticMethod(); // invokes the staticMethod() of A
+ B.staticMethod(); // invokes the staticMethod() of B
+ ```
+
+* Should be invoked through the class name instead of the instances. However, instance.staticMethod() also works, just not recommended.
 ```java
 Jojo.dio();
 ```
@@ -521,8 +530,11 @@ public boolean equals(object other){
 
 ### getClass vs instanceof
 
-* instanceof() returns true as long as the class is a descendant of the class (<=)
-* Whereas getClass returns the memory location of the class (not the instance)
+* instanceof operator returns true as long as the class is a descendant of the class (<=) 
+```java
+Child instanceof Parent;
+```
+* Whereas getClass() returns the memory location of the class (not the instance)
 * Note: every descendant of the Object class has a static variable "class" that allows you to compare it to the getClass();
 ## Polymorphism
 #### Introduction
@@ -531,10 +543,10 @@ public boolean equals(object other){
 * Through late binding and dynamic binding
 ####  Binding
 * Binding refers to associating a method definition with a method invocation
-* If the association happens during the compiling stage, it's called **early binding**
-* If the association happens when the method is invoked, i.e. during run time, it's called **late binding** or **dynamic binding**. 
-* In this example, equals is an example of late binding since both Person and Jojo have the equals method, and Jojo's equals() overrides the Person's. getName() is an example of early binding as Jojo simply inherits the method from Person.
-* Note: no late binding for static methods
+* If the association happens during the compiling stage, it's called **early binding**. e.g. inheriting a method
+* If the association happens when the method is invoked, i.e. during run time, it's called **late binding** or **dynamic binding**.  e.g. overriding a method, and decide which one to use (parent or child) at run time.
+* In this example, equals is an example of late binding since both Person and Jojo have the equals method, and Jojo's equals() overrides the Person's equals(). getName() is an example of early binding as Jojo simply inherits the method from Person.
+* Note: no late binding for static methods (as there's no method overriding for static methods)
 * Note: **final** indicates that you can't override the method
 ```java
 public class Person{
@@ -637,11 +649,11 @@ Writer m = new Murakami();
 ### Methods/Constants with same name
 Compile time errors (Might be run time, but still not gonna work):
 *  Constants with same name but different values
-* Methods with same name but different return types
+* Methods with same name but different return types (Which one am I supposed to call?)
 
 Runs fine:
 * Same names, same return types (Doesn't make sense however.)
-* Same names, different parameter types (method overloading)
+* Same names, different parameter list (method overloading)
 
 ### Marker Interface
 * Empty interface (No constants/method signatures)
@@ -652,9 +664,9 @@ Runs fine:
 ### Normal Interfaces
 * e.g. Comparable (ordered/ranked/sorted)
 	* Has only one method signature: compareTo(Object other)
-	* negative int if this precedes other
+	* negative int if this precedes other (this < other)
 	* 0 if same
-	* positive if other precedes this
+	* positive if other precedes this (other < this)
 * Generic class = parameterised class: Enables code to be applied to any class
 
 ### ArrayList

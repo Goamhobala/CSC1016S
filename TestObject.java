@@ -10,4 +10,7 @@ public class TestObject{
     public String toString(){
         return "Fucking weirdo";
     }
+    
+    public TestObject toString(){
+    }
 }
